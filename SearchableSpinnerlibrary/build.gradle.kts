@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
+    id("maven-publish")
+
 
 }
 
@@ -35,6 +37,25 @@ android {
 
     buildFeatures {
         viewBinding = true
+    }
+
+    publishing {
+        singleVariant("release") { // Declare the release variant for publishing
+            withSourcesJar()
+        }
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            groupId = "com.SearchSpinnerLibrary"
+            artifactId = "SearchSpinner"
+            version = "1.0.0"
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
     }
 }
 
