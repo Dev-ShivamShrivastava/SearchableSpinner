@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView android:layout_width="match_parent"
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -20,17 +21,7 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:hint="Search" />
-        <TextView
-            android:id="@+id/tvViewHeader"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:hint="select Item"
-            android:textColor="#0B0A0A"
-            android:clickable="true"
-            android:background="?android:attr/selectableItemBackground"
-            android:padding="7dp">
-        </TextView>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvItems"
             android:layout_width="match_parent"
