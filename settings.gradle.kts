@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "CustomSpinner"
 include(":app")
+include(":SearchableSpinnerlibrary")
