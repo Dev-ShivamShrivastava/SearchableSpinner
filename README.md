@@ -16,7 +16,7 @@ Step:1  Add the jitpack repository to your Project setting file
 Step:2 Add Dependencies
 
     dependencies {
-	        implementation 'com.github.Dev-ShivamShrivastava:SearchableSpinner:1.02'
+	        implementation 'com.github.Dev-ShivamShrivastava:SearchableSpinner:1.0.2'
 	}
 
 How to Use :- 
