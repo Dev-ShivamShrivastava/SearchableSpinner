@@ -1,5 +1,8 @@
 package com.searchablespinnerlibrary
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.LayoutInflater
@@ -51,4 +54,9 @@ fun View.showSearchablePopupAbove(
     val location = IntArray(2)
     this.getLocationOnScreen(location)
     popupWindow.showAsDropDown(this, 0, -this.getHeight() + popupView.getHeight())
+}
+
+fun Activity.openSpinnerActivity(){
+    val intent = Intent(this, SpinnerActivity::class.java)
+    startActivity(intent)
 }
